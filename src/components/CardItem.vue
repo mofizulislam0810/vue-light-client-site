@@ -9,7 +9,7 @@
       <p class="font-weight-black text-left mb-0">
         price {{ item.price }}Tk
       </p>
-      <v-btn class="p-0 ps-0" color="orange lighten-2" text>
+      <v-btn class="p-0 ps-0" color="orange lighten-2" text :to="'/details/' + item._id">
         Details
       </v-btn>
     </div>
@@ -43,10 +43,11 @@ export default {
       required: true
     }
   },
-
-  data: () => ({
-    show: false,
-  }),
+  data() {
+    return {
+      show: false,
+    };
+  }
 }
 </script>
 

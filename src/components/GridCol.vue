@@ -2,7 +2,7 @@
   <div class="">
     <v-card class="d-flex align-content-center justify-space-around flex-wrap py-6 px-6" color="grey lighten-2" flat
       tile min-height="200">
-      <v-card class="ma-2" v-for="item in lightList" :key="item.id">
+      <v-card class="ma-2" v-for="item in lightList" :key="item._id">
         <CardItem :item="item"></CardItem>
       </v-card>
     </v-card>
