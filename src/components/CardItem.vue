@@ -13,23 +13,6 @@
         Details
       </v-btn>
     </div>
-
-
-    <v-card-actions>
-      <!-- <v-btn icon @click="show = !show">
-        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-      </v-btn> -->
-    </v-card-actions>
-
-    <!-- <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
-
-        <v-card-text>
-          {{ item.description }}
-        </v-card-text>
-      </div>
-    </v-expand-transition> -->
   </v-card>
 </template>
 
