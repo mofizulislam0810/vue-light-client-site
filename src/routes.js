@@ -10,39 +10,39 @@ import LoginPage from "./components/LoginPage.vue";
 Vue.use(VueRouter);
 const routes = [
   {
-    name:"Home",
+    name: "Home",
     path: "/",
     component: HomePage,
   },
   {
-    name:"Details",
+    name: "Details",
     path: "/details/:id",
     component: DetailsItem,
-    meta : {auth:false}
+    meta: { auth: false },
   },
   {
-    name:"Order",
+    name: "Order",
     path: "/order/:id",
     component: OrderItem,
-    meta : {auth:true}
+    meta: { auth: true },
   },
   {
-    name:"OrderList",
+    name: "OrderList",
     path: "/orderlist",
     component: OrderList,
-    meta : {auth:true}
+    meta: { auth: true },
   },
   {
-    name:"Register",
+    name: "Register",
     path: "/register",
     component: RegisterPage,
-    meta : {auth:false}
+    meta: { auth: false },
   },
   {
-    name:"Login",
+    name: "Login",
     path: "/login",
     component: LoginPage,
-    meta : {auth:false}
+    meta: { auth: false },
   },
 ];
 
@@ -51,11 +51,11 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if(to.meta.auth){
-    next('/login')
-  }else{
+  if (to.meta.auth) {
+    next("/login");
+  } else {
     next();
   }
-})
+});
 
 export default router;

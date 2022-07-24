@@ -9,6 +9,9 @@
         <v-btn :disabled="!valid" color="success" class="mr-4" @click="login(email, password)">
             Login
         </v-btn>
+         <!-- <v-btn :disabled="!valid" color="success" class="mr-4" @click="increment()">
+            Store
+        </v-btn> -->
     </v-form>
 </template>
 
@@ -29,7 +32,6 @@ export default {
         ],
         checkbox: false,
     }),
-
     methods: {
         login(email, password) {
             const auth = getAuth();
@@ -48,6 +50,9 @@ export default {
         }
 
     },
+     increment() {
+    console.log(this.$store.state.count)
+  }
 }
 </script>
 

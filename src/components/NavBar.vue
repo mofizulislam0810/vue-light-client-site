@@ -9,21 +9,21 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn>
+            <v-btn small>
                 <v-icon>mdi-heart</v-icon>
                 <router-link to="/orderlist">
-                    <v-toolbar-title>My Order</v-toolbar-title>
+                    My Order
                 </router-link>
             </v-btn>
 
-            <v-btn class="ms-2">
+            <v-btn small class="ms-2">
                 <router-link to="/register">
-                    <v-toolbar-title>Register</v-toolbar-title>
+                    Register
                 </router-link>
             </v-btn>
-            <v-btn class="ms-2">
+            <v-btn small class="ms-2">
                 <router-link to="/login">
-                    <v-toolbar-title>Login</v-toolbar-title>
+                    Login
                 </router-link>
             </v-btn>
 

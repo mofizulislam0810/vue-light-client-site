@@ -3,6 +3,7 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from "./routes";
 import { initializeApp } from "firebase/app";
+import {store} from "./store"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,5 +24,6 @@ Vue.config.productionTip = false
 new Vue({
   vuetify,
   router,
-  render: h => h(App)
+  store,
+  render: h => h(App),
 }).$mount('#app')
