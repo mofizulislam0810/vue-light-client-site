@@ -3,15 +3,30 @@
         <v-app-bar color="deep-purple accent-4" dense dark>
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-            <router-link to="/"><v-toolbar-title>Vue Light</v-toolbar-title></router-link>
+            <router-link to="/">
+                <v-toolbar-title>Vue Light</v-toolbar-title>
+            </router-link>
 
             <v-spacer></v-spacer>
 
             <v-btn>
                 <v-icon>mdi-heart</v-icon>
-                 <router-link to="/orderlist"><v-toolbar-title>My Order</v-toolbar-title></router-link>
+                <router-link to="/orderlist">
+                    <v-toolbar-title>My Order</v-toolbar-title>
+                </router-link>
             </v-btn>
- 
+
+            <v-btn class="ms-2">
+                <router-link to="/register">
+                    <v-toolbar-title>Register</v-toolbar-title>
+                </router-link>
+            </v-btn>
+            <v-btn class="ms-2">
+                <router-link to="/login">
+                    <v-toolbar-title>Login</v-toolbar-title>
+                </router-link>
+            </v-btn>
+
             <!-- <v-btn icon>
                 <v-icon>mdi-magnify</v-icon>
             </v-btn> -->
@@ -41,7 +56,7 @@ export default {
 </script>
 
 <style>
-a{
+a {
     text-decoration: none;
     color: white !important;
 }
