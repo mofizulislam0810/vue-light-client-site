@@ -3,6 +3,7 @@ import HomePage from "./components/HomePage.vue";
 import DetailsItem from "./components/DetailsItem.vue";
 import OrderItem from "./components/OrderItem.vue";
 import VueRouter from "vue-router";
+import OrderList from "./components/OrderList.vue";
 
 Vue.use(VueRouter);
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
     name:"Order",
     path: "/order/:id",
     component: OrderItem,
+  },
+  {
+    name:"OrderList",
+    path: "/orderlist",
+    component: OrderList,
   },
 ];
 

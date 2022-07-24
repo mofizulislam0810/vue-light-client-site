@@ -8,7 +8,7 @@
         <v-text-field label="Customer Email" v-model="email" readonly></v-text-field>
         <v-text-field label="Order Status" v-model="status" readonly></v-text-field>
         <v-text-field label="Phone Number" v-model="phone" readonly></v-text-field>
-        <v-btn block>
+        <v-btn block @click="order()">
             Order Now
         </v-btn>
     </div>
@@ -28,9 +28,31 @@ export default {
             value => !!value || 'Required.',
             value => (value && value.length >= 3) || 'Min 3 characters',
         ],
-        lightDetails: [],
+        lightDetails: {
+            _id: "",
+            name: "",
+            price: "",
+        },
     }),
     methods: {
+        async order() {
+            const result = await axios.post("https://cryptic-stream-18194.herokuapp.com/orders", {
+                name: this.name,
+                email: this.email,
+                productName: this.lightDetails.name,
+                price: this.lightDetails.price,
+                status: this.status,
+                description: this.lightDetails.description,
+                image: this.lightDetails.image,
+                phone: this.phone,
+            })
+            if (result.status === 200) {
+                if (result.data.insertedId) {
+                    alert("Successfully Order!");
+                }
+            }
+            console.warn(result)
+        },
         async loader() {
             const result = await axios.get("https://cryptic-stream-18194.herokuapp.com/products/" + this.$route.params.id);
             console.log(result);
@@ -40,6 +62,7 @@ export default {
     async mounted() {
         this.loader();
     },
+
 }
 </script>
 

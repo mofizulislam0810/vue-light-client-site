@@ -3,17 +3,18 @@
         <v-app-bar color="deep-purple accent-4" dense dark>
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-            <v-toolbar-title>Vue Light</v-toolbar-title>
+            <router-link to="/"><v-toolbar-title>Vue Light</v-toolbar-title></router-link>
 
             <v-spacer></v-spacer>
 
-            <v-btn icon>
+            <v-btn>
                 <v-icon>mdi-heart</v-icon>
+                 <router-link to="/orderlist"><v-toolbar-title>My Order</v-toolbar-title></router-link>
             </v-btn>
-
-            <v-btn icon>
+ 
+            <!-- <v-btn icon>
                 <v-icon>mdi-magnify</v-icon>
-            </v-btn>
+            </v-btn> -->
 
             <v-menu left bottom>
                 <template v-slot:activator="{ on, attrs }">
@@ -40,4 +41,8 @@ export default {
 </script>
 
 <style>
+a{
+    text-decoration: none;
+    color: white !important;
+}
 </style>
